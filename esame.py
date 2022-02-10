@@ -176,14 +176,14 @@ def compute_avg_monthly_difference(time_series, first_year,last_year):
         #se ci sono solo due anni 
         if (len_years==2):
         #se un valore e' 0 la media in quel mese equivale a 0
-            if lista_anni[i]==0 or lista_anni[i+12]==0 or lista_anni[i]==None or lista_anni[i+12]==None:
+            if lista_anni[i]==0 or lista_anni[i+12]==0:
                 risultato=0
          
         else:   
             #cosi' faccio la sottrazione tra i valori dello stesso mese
             for b in range(1,len_years):
                 #se l'intervallo degli anni e' maggiore di due, ma ci sono meno di due misurazioni per un mese, il risultato sara' Zero
-                if (lista_anni[i+(12*b)]==0) or (lista_anni[i+12*(b-1)]==0) or lista_anni[i+(12*b)]==None or lista_anni[i+12*(b-1)]==None:
+                if (lista_anni[i+(12*b)]==0) or (lista_anni[i+12*(b-1)]==0):
                     risultato=0
                 else:
                     #senno' faccio la media
